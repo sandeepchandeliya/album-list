@@ -5,7 +5,7 @@ export default function AlbumItem({ album, onDelete, onEdit }) {
     <>
       <div className="bg-white border rounded-lg shadow hover:shadow-lg transition p-4 w-64">
         <img
-          src="public/dummy.webp"
+          src="/dummy.webp"
           className="w-full h-40 object-cover rounded-md"
           alt="dummy"
         />
