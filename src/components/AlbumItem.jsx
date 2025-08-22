@@ -1,3 +1,5 @@
+//-----> Displays a single album card with details and actions
+
 export default function AlbumItem({ album, onDelete, onEdit }) {
   return (
     <>

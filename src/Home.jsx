@@ -3,13 +3,18 @@ import api from './api';
 import AlbumList from './components/AlbumList';
 import EditForm from './components/EditForm';
 export default function Home() {
+  //-----> State to store all albums
   const [albums, setAlbums] = useState([]);
+  //-----> State to track the currently selected album  
   const [selectedAlbum, setSelectedAlbum] = useState(null);
 
+
+  //-----> Fetch the album when component first mount
   useEffect(() => {
     getAlbums();
   }, []);
 
+  //-----> fetch albums from API
   const getAlbums = async () => {
     try {
       const res = await api.get('/albums');
@@ -20,6 +25,7 @@ export default function Home() {
     }
   };
 
+  //-----> Delete an album by id
   const deleteAlbum = async (id) => {
     try {
       await api.delete(`/albums/${id}`);
@@ -28,7 +34,8 @@ export default function Home() {
       console.error(error);
     }
   };
-
+  
+  //-----> Update an exisiting album
   const updateAlbum = async (updatedAlbum) => {
     try {
       await api.put(`/albums/${updatedAlbum.id}`, updatedAlbum);
@@ -37,7 +44,7 @@ export default function Home() {
           album.id === updatedAlbum.id ? updatedAlbum : album
         )
       );
-
+     //-----> this close edit form after saving
       setSelectedAlbum(null);
     } catch (error) {
       console.error(error);
@@ -55,6 +62,7 @@ export default function Home() {
           onEdit={setSelectedAlbum}
         />
 
+        {/* shows edit form only when selected */}
         {selectedAlbum && (
           <EditForm
             album={selectedAlbum}

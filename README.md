@@ -1,12 +1,81 @@
-# React + Vite
+# 🎶 Album List App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple **React CRUD app** that displays albums fetched from the **JSONPlaceholder API**.  
+Users can view, edit, and delete albums, with a clean UI styled using **Tailwind CSS**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- 📡 Fetches album data from [JSONPlaceholder](https://jsonplaceholder.typicode.com/albums)
+- 📑 Displays albums in a responsive grid
+- ✏️ Edit album details with a modal form
+- ❌ Delete albums instantly
+- 🎨 Styled with Tailwind CSS for a modern, responsive design
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack
+
+- **React (Vite)** – Frontend framework
+- **Axios** – For API requests
+- **Tailwind CSS** – Styling
+- **JSONPlaceholder API** – Mock backend
+
+---
+
+## 📂 Project Structure
+   ```bash
+
+├── .gitignore
+├── README.md
+├── eslint.config.js
+├── index.html
+├── package-lock.json
+├── package.json
+├── postcss.config.js
+├── public
+    └── dummy.webp
+├── src
+    ├── App.css
+    ├── App.jsx
+    ├── Home.jsx
+    ├── api.js
+    ├── components
+    │   ├── AlbumItem.jsx
+    │   ├── AlbumList.jsx
+    │   └── EditForm.jsx
+    ├── index.css
+    └── main.jsx
+├── tailwind.config.js
+└── vite.config.js
+
+
+
+
+
+---
+
+## ⚙️ Setup & Installation
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/sandeepchandeliya/album-list.git
+   cd album-list
+
+2. Install dependencies:
+
+    bash
+    Copy
+    Edit
+    npm install
+
+
+3. Run the development server:
+
+    npm run dev
+
+
+4. Open the app in your browser at:
+
+    http://localhost:5173/    

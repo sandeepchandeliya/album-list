@@ -4,7 +4,7 @@ import Home from './Home'
 
 function App() {
   
-
+  //-----> It renders the home component
   return (
     <>
       <Home />
