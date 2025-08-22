@@ -1,4 +1,4 @@
-# 🎶 Album List App
+# 🌄 Album List App
 
 A simple **React CRUD app** that displays albums fetched from the **JSONPlaceholder API**.  
 Users can view, edit, and delete albums, with a clean UI styled using **Tailwind CSS**.
